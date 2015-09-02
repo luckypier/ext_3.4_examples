@@ -2,19 +2,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <title>Hello Pierre</title>
+    <title>Hello Pierre RC</title>
+	
+	<!-- Basic objects -->
     <link rel="stylesheet" type="text/css" href="./css/ext-all.css" />
-
-    <!-- GC -->
-    <!-- LIBS -->
-    <script type="text/javascript" src="./js/ext-base.js"></script>
-    <!-- ENDLIBS -->
-
-    <script type="text/javascript" src="./js/ext-all-debug.js"></script>
-    <script language="javascript" src="hello.js"></script>
-
-	<!-- Common Styles for the examples -->
-	<link rel="stylesheet" type="text/css" href="./css/examples.css" />
+	<script type="text/javascript" src="./js/ext-base.js"></script>
+	<script type="text/javascript" src="./js/ext-all-debug.js"></script>
+	<script type="text/javascript">Ext.BLANK_IMAGE_URL = '/images/default/s.gif';</script>
+    
+    <!-- This app objects -->
+	<link rel="stylesheet" type="text/css" href="./css/examples.css" />	
+	<script type="text/javascript" src="./js/examples.js"></script>
+	<script language="javascript" src="hello.js"></script>
 
     <style type="text/css">
     .x-panel-body p {
@@ -24,13 +23,12 @@
     </style>
 </head>
 <body>
-<script type="text/javascript" src="./js/examples.js"></script><!-- EXAMPLES -->
-
-<input type="button" id="show-btn" value="Show magic !!!" /><br /><br />
-
-<div id="hello-win" class="x-hidden">
-    <div class="x-window-header">Hello Dialog</div>
-    <div id="hello-tabs"></div>
-</div>
+	<script type="text/javascript">Ext.onReady(readyFunction);</script>
+	
+	<input type="button" id="show-btn" value="Show magic !!!" /><br /><br />
+	<div id="hello-win" class="x-hidden">
+		<div class="x-window-header">Dialog</div>
+		<div id="hello-tabs"></div>
+	</div>
 </body>
 </html>

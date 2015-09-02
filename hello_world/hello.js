@@ -1,4 +1,4 @@
-Ext.onReady(function(){
+function readyFunction(){
     var win;
     var button = Ext.get('show-btn');
 
@@ -33,7 +33,11 @@ Ext.onReady(function(){
                 buttons: [
 					{
 						text:'Submit',
-						disabled:true
+						handler:buildWindow
+					},
+					{
+						text:'Alert',
+						handler:myBtnHandler
 					},{
 						text: 'Close',
 						handler: function(){
@@ -45,4 +49,23 @@ Ext.onReady(function(){
         }
         win.show(this);
     });
-});
+};
+
+var myBtnHandler = function(btn) {
+	Ext.MessageBox.alert('You Clicked', btn.text);
+}
+
+function buildWindow() {
+	var win = new Ext.Window({
+		id : 'myWindow',
+		title : 'My first Ext JS Window',
+		width : 300,
+		height : 150,
+		layout : 'fit',
+		autoLoad : { // 2
+			url : 'sayHi.html',
+			scripts : true
+		}
+	});
+	win.show();
+};
